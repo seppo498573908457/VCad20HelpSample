@@ -7,12 +7,15 @@
 		<meta name="MobileOptimized" content="width">
 		<meta name="HandheldFriendly" content="true">
 		<title>VituixCAD help 2.0</title>
+		<link type="text/css" rel="stylesheet" href="images/css/bootstrap.min.css" />
 		<style>
 			body { font-family: verdana; font-size: 0.8125em; }
-			h1 { color: SteelBlue; }
-			h2 { color: SteelBlue; margin-bottom: 0.3em; }
-			h3 { color: SteelBlue; margin-bottom: 0.3em; }
-			h4 { color: SteelBlue; margin-top: 0.4em; margin-bottom: 0.3em; }
+			h1, h2, h3, h4, h5, h6 { color: SteelBlue; font-weight: bold; }
+			h1 { font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; }
+			h2 { font-size: 2em; margin-bottom: 0.3em; }
+			h3 { font-size: 1.5em; margin-bottom: 0.3em; }
+			h4 { font-size: 1.17em; margin-top: 0.4em; margin-bottom: 0.3em; }
+			h5 { font-size: 1em; }
 			img { border: 0; max-width: 100%; height: auto; }
 			p { margin-left: 1em; }
 			table { border-style: none; margin-left: 1em; }
@@ -21,20 +24,30 @@
 			.code { font-family: monospace; font-size: 1.2em; margin-left: 2em; margin-top: 0.1em; margin-bottom: 0.3em; }
 			.indent1 { margin-left: 1em; }
 			.toc { list-style-type: none; padding: 0; margin: 0; }
+			.capt1, .capt2 { line-height: 1.2; color: SteelBlue; font-weight: bold; }
+			.capt1 { font-size: 1.17em; }
+			.capt2 { font-size: 1.5em; }
 		</style>
 	</head>
 	<body>
-		<table><tbody><tr><td style="text-align: center;">
-		<h1>VituixCAD</h1>
-		<h3>The Loudspeaker Simulation Tool</h3>
-		<img class="indent1" alt="logo" src="images/logo.png"><br>
-		<h2>User Manual</h2>
-		Version 2.0.126.0 (2025-06-06)<br>
-		Copyright © Kimmo Saunisto 2025<br>
-		<a href="mailto:kimmo.saunisto@gmail.com">kimmo.saunisto@gmail.com</a>
-		</td></tr></tbody></table>
+	<div class="container">
+	<div class="row">
+	<div class="col-8 col-md-6 col-lg-4">
+		<h1 class="text-center">VituixCAD</h1>
+		<div class="text-center">
+			<div class="capt1">The Loudspeaker Simulation Tool</div><br>
+			<img class="indent1" alt="logo" src="images/logo.png"><br>
+			<div class="capt2">User Manual</div>
+			Version 2.0.126.0 (2025-06-06)<br>
+			Copyright © Kimmo Saunisto 2025<br>
+			<a href="mailto:kimmo.saunisto@gmail.com">kimmo.saunisto@gmail.com</a>
+		</div>
+	</div>
+	</div>
+	</div>
+	<div class="container">
 		<hr>
-		<h2 id="TOC">Table of contents</h2>
+		<h3 id="TOC">Table of contents</h3>
 		<ul>
 			<li class="toc"><a href="#General_information">General information</a></li>
 			<li class="toc"><ul>
@@ -153,10 +166,12 @@
 				<li class="toc"><a href="#Trifonov_Transient">1. Trifonov Transient filters</a></li>
 			</ul></li>			
 		</ul>
-		
+	</div>
+
 		<hr>
-		
-		<h1 id="General_information">General information</h1>
+
+	<div class="container">
+		<h2 id="General_information">General information</h2>
 		<p>VituixCAD is loudspeaker simulation software.
 			Design philosophy is to simulate loudspeaker behavior in full space or half space.
 			Even though emphasis is on power response, polar responses and directivity index,
@@ -168,7 +183,7 @@
 			response tracer, response merger, response calculator, auxiliary calculator and FFT tool included.
 		</p>
 
-		<h2 id="System_requirements">System requirements</h2>
+		<h3 id="System_requirements">System requirements</h3>
 		<ul>
 			<li>VituixCAD is tested on Windows 7 sp1, Vista sp2, 8, 8.1, 10 and 11</li>
 			<li><a target="_blank" href="https://www.microsoft.com/en-us/download/details.aspx?id=42642">Microsoft .NET Framework 4.5.2</a></li>
@@ -178,7 +193,7 @@
 			Runs also on Wine with .NET 4.5.2 installed, but it's not quaranteed.
 			Performance and features could be radically reduced compared to Winwdows 10-11 in real machine.
 		</p>
-		<h2 id="Installation_and_upgrade">Installation and upgrade</h2>
+		<h3 id="Installation_and_upgrade">Installation and upgrade</h3>
 		<p>Download the latest build: <a target="_blank" href="https://kimmosaunisto.net/Software/VituixCAD/VituixCAD2_setup.exe">VituixCAD2_setup.exe</a>.
 			See also <a target="_blank" href="https://kimmosaunisto.net/Software/VituixCAD/changelog2.html">changelog</a>.
 		</p>
@@ -186,7 +201,7 @@
 			Installation to Linux with Wine: <a target="_blank" href="https://kimmosaunisto.net/Software/VituixCAD/VituixCAD_in_Linux_v0.2.pdf">VituixCAD in Linux v0.2.pdf</a>
 		</p>
 		<p><strong>Public</strong> folders created by setup program:</p>
-		<table>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>\Users\Public\Documents\VituixCAD\Enclosure</td>
@@ -207,7 +222,7 @@
 			</tbody>
 		</table>
 		<p><strong>User</strong> folders created while running if not already exist:</p>
-		<table>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>\Users\username\Documents\VituixCAD\Download</td>
@@ -223,8 +238,8 @@
 				</tr>
 			</tbody>
 		</table>
-		<h3 id="Command_line_arguments">Command line arguments (optional)</h3>
-		<table>
+		<h4 id="Command_line_arguments">Command line arguments (optional)</h4>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>VituixCAD.exe &quot;path\filename&quot;</td>
@@ -232,25 +247,25 @@
 				</tr>
 			</tbody>
 		</table>
-		<h3 id="Project_directory_structure">Project directory structure</h3>
+		<h4 id="Project_directory_structure">Project directory structure</h4>
 		<p>All files included in loudspeaker project should be located to \Users\<i>username</i>\Documents\VituixCAD\Projects\<i>projectname</i>
 			and it's subdirectories in order to help archiving as zip-file and distribution to other users.
 			Project folders can be created with 'Create project subfolders' window integrated to <b>File->New</b> command. Two different hierarchy options are available:</p>
-		<h4>Project name \ Data folder \ Driver model</h4>
+		<h5>Project name \ Data folder \ Driver model</h5>
 		<img class="indent1" alt="create_project_subfolders_1.png" src="images/create_project_subfolders_1.png">
 		<p>This hierarchy option supports typical measurement sequence:
 			1) Far field measurements of all drivers 2) Near field measurements of all drivers and ports 3) Impedance measuremenents of all drivers.</p>
 		<p>Enter driver models to the table and check <b>Common folders</b> and <b>Data folders</b> you want to create.</p>
 		<img class="indent1" alt="project_subfolders_1.png" src="images/project_subfolders_1.png">
 		<p></p>
-		<h4>Project name \ Driver model \ Data folder</h4>
+		<h5>Project name \ Driver model \ Data folder</h5>
 		<img class="indent1" alt="create_project_subfolders_2.png" src="images/create_project_subfolders_2.png">
 		<p>This hierarchy option locates measurement data of a single driver to the same folder.
 			It could help copying data to different project using the same driver+enclosure -combination.</p>
 		<img class="indent1" alt="project_subfolders_2.png" src="images/project_subfolders_2.png">
 		<p>Save all project files .vxp, .vxe, .vxb, .vxm to the main folder of the project (VituixCAD\Projects\<i>projectname</i>).</p>
 		<p>Typical content of <b>Common folders</b>:</p>
-		<table>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>Datasheet</td>
@@ -282,7 +297,7 @@
 			</tbody>
 		</table>
 		<p>Typical content of <b>Data folders</b>:</p>
-		<table>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>Far</td>
@@ -303,12 +318,12 @@
 			</tbody>
 		</table>
 		<p>Create button creates also empty project (.vxp) with driver models listed to the table.</p>
-		<h2 id="Support">Support</h2>
+		<h3 id="Support">Support</h3>
 		<p>Press F1 for help.</p>
 		<p>The latest online manual can also be opened to your default browser from the internet.
 			Add bookmark to the browser for fast access to the latest revision.
 		</p>
-		<h3><a id="How_to_start_with_VituixCAD"></a>How to start working with VituixCAD</h3>
+		<h4><a id="How_to_start_with_VituixCAD"></a>How to start working with VituixCAD</h4>
 		<ul>
 			<li>Install the latest build of version 2.0.</li>
 			<li>Read this document.
@@ -352,7 +367,7 @@
 				<img alt="active_2-way_2nd_order.png" src="images/active_2-way_2nd_order.png"></li>
 
 		</ul>
-		<h3 id="YouTube_videos">YouTube videos</h3>
+		<h4 id="YouTube_videos">YouTube videos</h4>
 		<ul>
 			<li><a href="https://www.youtube.com/watch?v=cUGDhpleWD0">VituixCAD Merger</a></li>
 			<li><a href="https://www.youtube.com/watch?v=v_cd3V4mbiA">VituixCAD 2 free form network (2.0.3.7)</a></li>
@@ -360,7 +375,7 @@
 			<!-- <li><a href="https://www.youtube.com/watch?v=2YEe-EVz3oM">Creating off-axis responses with VituixCAD Diffraction tool</a></li> -->
 			<li><a href="https://www.youtube.com/watch?v=Gmfz-VNxE20">VituixCAD SPL Trace (1.1.18.1)</a></li>
 		</ul>
-		<h3 id="Discussion_forums">Discussion forums</h3>
+		<h4 id="Discussion_forums">Discussion forums</h4>
 		<ul>
 			<li><a href="http://www.htguide.com/forum/showthread.php?44128-VituixCAD-v2">htguide.com</a></li>
 			<li><a href="https://www.hifiharrastajat.org/foorumi/showthread.php/121510-VituixCAD">hifiharrastajat.org</a> Finnish</li>
@@ -370,12 +385,12 @@
 			<li><a href="https://ssl.diyaudio.pl/showthread.php/29379-VituixCAD">diyaudio.pl</a> Polish</li>
 			<li><a href="http://hifi.slovanet.sk/bb/viewtopic.php?t=23483">slovanet.sk</a> Slovene/Slovak</li>
 		</ul>
-		<h3 id="User_groups">User groups</h3>
+		<h4 id="User_groups">User groups</h4>
 		<ul>
 			<li><a href="https://www.facebook.com/groups/454942413386350">Facebook VituixCAD group</a></li>
 		</ul>
 		<hr>		
-		<h1 id="Preface">Preface</h1>
+		<h2 id="Preface">Preface</h2>
 		<p>This user guide is a chronological walkthrough on how to design a loudspeaker with VituixCAD.
 			Commonly, design process starts with deciding enclosure size, drivers, radiator type, alignment etc.
 			Enclosure tool is used for simulating enclosures, different radiator types and alignments.
@@ -390,11 +405,11 @@
 		<p>Building prototypes and crossovers are not covered in this guide.
 			This guide will also assume you have suitable measurement gear and software and understanding about how to measure loudspeaker drivers for design purposes.
 		</p>
-		<h2 id="Checklist_for_designing_a_loudspeaker">Checklist for designing a loudspeaker</h2>
+		<h3 id="Checklist_for_designing_a_loudspeaker">Checklist for designing a loudspeaker</h3>
 		<p>Investigate acoustic parameters, dimensions, materials and speaker placement possibilities of the listening room.
 			It is wise to fix issues of bad environment (the room) first rather than trying to handle everything with massive and complex speaker design.
 		</p>
-		<h4>Basic engineering</h4>
+		<h5>Basic engineering</h5>
 		<ul>
 			<li>Decide acoustic design; type and amount of directivity, radiator types, ways, driver size and count.</li>
 			<li>Estimate possible sensitivity range and crossover frequency ranges.</li>
@@ -404,12 +419,12 @@
 				and to the longest ever possible listening distance, for example 10 meters.</li>
 			<li>Design the cabinet.</li>
 		</ul>
-		<h4>Construction</h4>
+		<h5>Construction</h5>
 		<ul>
 			<li>Build flexible prototype or final cabinet depending on uncertainties in the design</li>
 			<li>Connect temporary cables to individual drivers (or driver groups) for acoustical and electrical measurements.</li>
 		</ul>
-		<h4>Measurements</h4>
+		<h5>Measurements</h5>
 		<ul>
 			<li>Prepare turning table for polar response measurements.
 				Manual turning table is easy to make and fast to use for example with Clio 10-12 or ARTA 1.9 or REW V5.20.14ea27+.
@@ -438,13 +453,13 @@
 		<p>Export frequency responses with <b>Convert IR to FR tool</b> if measured with CLIO or ARTA, or measurements are exported to wav files.
 			This is not needed with REW 5.20 beta 7 or later having group export.
 		</p>
-		<h4>Merge and manipulate response data</h4>
+		<h5>Merge and manipulate response data</h5>
 		<ul>
 			<li>Merge far field and near field responses with <b>Merger tool</b> if you didn't measure low frequency radiators (&lt;300 Hz) at far field in anechoic environment.</li>
 			<li>Export merged responses as separate txt/frd-files.</li>
 			<li>Load cabinet impact response (from diffraction simulation) and attach it (by checking BS) to LF near field responses of the cones and ports located in front baffle.</li>
 		</ul>
-		<h4>Simulate crossover with VituixCAD main program</h4>
+		<h5>Simulate crossover with VituixCAD main program</h5>
 		<ul>
 			<li>Create new empty project and enter Description</li>
 			<li>Add driver models in Drivers tab</li>
@@ -466,8 +481,8 @@
 				Save most promising intermediate results to project file or crossover variant.
 			</li>
 		</ul>
-		<h4>Build passive or configure active crossover</h4>
-		<h4>Quality control</h4>
+		<h5>Build passive or configure active crossover</h5>
+		<h5>Quality control</h5>
 		<p>Mandatory QC-measurements</p>
 		<ul>
 			<li>Angled measurements in horizontal and vertical planes, at least 30 deg steps</li>
@@ -486,12 +501,12 @@
 
 		<hr>
 
-		<h1 id="Main_program">Main program</h1>
+		<h2 id="Main_program">Main program</h2>
 		<img class="indent1" alt="main.png" src="images/main.png">
 		<p>Main window is divided into two sections, control section on the left and graphs on the right.</p>
-		<h2 id="Menus">Menus</h2>
-		<h4>File</h4>
-		<table>
+		<h3 id="Menus">Menus</h3>
+		<h5>File</h5>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>New</td>
@@ -541,8 +556,8 @@
 				</tr>
 			</tbody>
 		</table>
-		<h4>View</h4>
-		<table>
+		<h5>View</h5>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>Optimizer (Ctrl+P)</td>
@@ -595,8 +610,8 @@
 				</tr>
 			</tbody>
 		</table>
-		<h4>Tools</h4>
-		<table>
+		<h5>Tools</h5>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>Enclosure (F3)</td>
@@ -628,8 +643,8 @@
 				</tr>
 			</tbody>
 		</table>
-		<h4>Options</h4>
-		<table>
+		<h5>Options</h5>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>(Alt+O)</td>
@@ -637,8 +652,8 @@
 				</tr>
 			</tbody>
 		</table>
-		<h4>Help</h4>
-		<table>
+		<h5>Help</h5>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>Help (F1)</td>
@@ -660,8 +675,8 @@
 				</tr>
 			</tbody>
 		</table>
-		<h2 id="Drivers_tab">Drivers tab</h2>
-		<h3 id="Driver_list">Driver list</h3>
+		<h3 id="Drivers_tab">Drivers tab</h3>
+		<h4 id="Driver_list">Driver list</h4>
 		<img class="indent1" alt="driver_list.png" src="images/driver_list.png">
 		<p>Drivers in the project are listed in Drivers table.
 			Give actual name for initial dummy driver &quot;Driver #1&quot;.
@@ -674,7 +689,7 @@
 			Different settings for six driver models are available.
 			Magnitude and phase responses can have different properties.
 		</p>
-		<h3 id="Main_Frequency_responses">Frequency responses</h3>
+		<h4 id="Main_Frequency_responses">Frequency responses</h4>
 		<p>Filenames must have valid coding for plane and off-axis angle.
 			ARTA style angle coding &lt;name-prefix&gt;_deg[+|-]&lt;num&gt;.txt is okay, as well as CLIO style &lt;name-prefix&gt; &lt;num&gt;.txt where angle &lt;num&gt; is multiplied by 100.
 			Different planes should be separated with a keyword, typically 'hor' or 'ver'.<br>
@@ -718,14 +733,14 @@
 			Optimizing to single off-axis direction is useful if On-axis response is bad or not representative or measurement data is poor and accurate power response is not available.
 			Default value is 0 deg hor.
 		</p>
-		<h3 id="Impedance_response">Impedance response</h3>
+		<h4 id="Impedance_response">Impedance response</h4>
 		<p>Select impedance response file for a driver(s) by clicking folder button or dropping file into text box.</p>
 		<p>Impedance response can be scaled as well with a multiplier.
 			If multiple drivers are entered to crossover as a single driver (not recommended), scaled impedance response should represent total impedance of driver group.
 			If impedance response was measured from group of drivers in common volume and drivers are entered to crossover as a single drivers (as recommended),
 			scaled impedance response should represent single driver.
 		</p>
-		<h3 id="Supported_response_file_types">Supported response file types</h3>
+		<h4 id="Supported_response_file_types">Supported response file types</h4>
 		<p>VituixCAD supports tab, space or semicolon delimited .txt or .frd or .zma (for impedance).
 			Recommended decimal separator is period (.).
 			Comma (,) is used as decimal separator if data line doesn't contain periods.
@@ -750,8 +765,8 @@
 			<li>SoundEasy</li>
 			<li>XSim</li>
 		</ul>
-		<h2 id="Crossover_tab">Crossover tab</h2>
-		<h3 id="Filter_schematic">Filter schematic</h3>
+		<h3 id="Crossover_tab">Crossover tab</h3>
+		<h4 id="Filter_schematic">Filter schematic</h4>
 		<img class="indent1" alt="filter_schematic.png" src="images/filter_schematic.png">
 		<p>Unlimited amount of components can be added via Crossover component menu.
 			Menu includes generic active blocks (9), active transfer function file, operational amplifier,
@@ -764,7 +779,7 @@
 			but not to Power dissipation window having own signal.
 			Level in SPL plots equals to USPL when frequency responses in Drivers tab are scaled to dBSPL/2.83V and Ug=2.83 V.
 		</p>
-		<h4>Filter block types</h4>
+		<h5>Filter block types</h5>
 		<p>Active Low pass and High pass filters (f).
 			Shape and Order are selected from list boxes:
 		</p>
@@ -845,7 +860,7 @@
 			Values of parameters with the same name and unit are copied to replacement component.
 			Driver, ground, library block and wire cannot be replaced directly without delete-&gt;add.
 		</p>
-		<h4>Driver instances</h4>
+		<h5>Driver instances</h5>
 		<p>Each driver instance added in the crossover can be provided with location relative to &quot;design origin&quot;.
 			Location is entered to Parameters grid.
 			Design origin is typically perpendicular endpoint of listening axis on front baffle surface.
@@ -866,7 +881,7 @@
 		<p>Example 1: Location (X,Y,Z) = (0,0,0) if multiple driver package is measured on design (listening) axis.<br>
 			Example 2: Location (X,Y,Z) = (0,-400,0) if multiple driver package is measured 400 mm below design (listening) axis.
 		</p>
-		<h4>Library block menu</h4>
+		<h5>Library block menu</h5>
 		<p>Library block menu can be filtered shorter with checkboxes in Filter group.
 			See searched keywords from tooltip of each checkbox.
 			Block is inserted to crossover by double-clicking or with Open button.
@@ -903,7 +918,7 @@
 			<strong>M</strong> for transformer, <strong>W</strong> for wire, <strong>G</strong> for ground, <strong>T</strong> for comment text and <strong>D</strong> for driver.
 		</p>
 		<p>Passive components and texts are added as rotated (=vertical) if Shift key is pressed while clicking component menu or shortcut letter key.</p>
-		<h4>Selection</h4>
+		<h5>Selection</h5>
 		<p>Components can be selected for modification by clicking or window selection.
 			Multi-selection with Ctrl or Shift key pressed is available for both clicking and window selection.
 			Selection set is reset by clicking empty area.
@@ -912,18 +927,18 @@
 			Other selected components (except Top component) are emphasized with semi-transparent highlight color, typically light blue.
 			All selected components are targets for moving or modification with context menu or shortcut keys.
 		</p>
-		<h4>Moving</h4>
+		<h5>Moving</h5>
 		<p>Selected components can be moved by dragging with mouse or arrow keys.
 			Wires connected to terminals of moving component are stretching along if component is moved by dragging and <strong>Stretch</strong> is checked.
 			Components are disconnected from the network without wire stretching if moved with arrow keys or Stretch is unchecked while dragging.
 			Pressing Alt or Shift key while dragging inverts the setting on the fly.
 		</p>
-		<h4>Modifying</h4>
+		<h5>Modifying</h5>
 		<p>Context menu shows possible (and few impossible) actions for the selected components.
 			See also shortcut keys.
 		</p>
 		<img class="indent1" alt="crossover_context.png" src="images/crossover_context.png">
-		<table>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>Tune block...</td>
@@ -1082,7 +1097,7 @@
 		<br>
 		<p>Buttons located below crossover schematic:</p>
 		<img class="indent1" alt="osim_buttons.png" src="images/osim_buttons.png">
-		<table>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td><strong>O</strong>pen</td>
@@ -1125,13 +1140,13 @@
 		<br>
 		<p>Visualization of component status:</p>
 		<img class="indent1" alt="component_visualization.png" src="images/component_visualization.png">
-		<h4>Comment text</h4>
+		<h5>Comment text</h5>
 		<p>In addition to normal text, comment could contain single link to local file or several URL-addresses separated with space or new line.
 			Comment text with URL(s) could contain normal text before, between or after the link(s).
 			All URLs are opened at once by single double-click.
 			Links are opened with desktop application if link text starts with application's name: for example onenote:https:// and Shift key is pressed while double-click.
 		</p>
-		<h4>Biquad coefficients with 'miniDSP' and 'Platin SM' and 'Generic -a12'</h4>
+		<h5>Biquad coefficients with 'miniDSP' and 'Platin SM' and 'Generic -a12'</h5>
 		<img class="indent1" alt="biquad_neg-a12.png" src="images/biquad_neg-a12.png">
 		<p>Sign of coefficients a1 and a2 is negative and a0 is normalized to 1.<br>
 			For example 3rd order Butterworth LP 1000 Hz:</p>
@@ -1149,7 +1164,7 @@
 			a1=0.876976462992757,<br>
 			a2=0, 
 		</div>
-		<h4>Biquad coefficients with other DSP systems</h4>
+		<h5>Biquad coefficients with other DSP systems</h5>
 		<img class="indent1" alt="biquad.png" src="images/biquad.png">
 		<p>Coefficients are compatible with 'Cookbook formulae for audio EQ biquad filter coefficients' by Robert Bristow-Johnson.<br>
 			Exception: coefficients are normalized to a0=1 with Generic DSP.<br>
@@ -1170,7 +1185,7 @@
 			a1=-0.936602207992062,<br>
 			a2=0,
 		</div>
-		<h4>Copy biquad coefficients window</h4>
+		<h5>Copy biquad coefficients window</h5>
 		<img class="indent1" alt="copy_biquad_coeffs.png" src="images/copy_biquad_coeffs.png">
 		<p>Selected IIR blocks can be copied or exported as digital biquad filter coefficients b0...a2.
 			Also parameters of active buffers is possible to copy/export.<br>
@@ -1190,7 +1205,7 @@
 			FIR, transfer function file, passive and open/shorted blocks are ignored.
 			Stability of biquad filters is not checked.
 		</p>
-		<h4>EQ settings template</h4>
+		<h5>EQ settings template</h5>
 		<img class="indent1" alt="copy_biquad_replace.png" src="images/copy_biquad_replace.png">
 		<p>Checking 'Replace variables' enables creating EQ settings text file from a template (.vxt by default).
 			Template file contains static text and variables which will be replaced with coefficient/parameter values in the text box.
@@ -1212,14 +1227,14 @@
 			$(variant) is crossover variant 1-8.
 		</p>
 		<p>Click Replace button to create and save EQ settings file. Default extension is .txt.</p>
-		<h4>Zooming</h4>
+		<h5>Zooming</h5>
 		<p>Click <strong>1:1</strong> button to zoom schematic picture to nominal 10 pixels/snap unit.<br>
 			Click <strong>Fit</strong> button to fit components into picture area (within limits of zooming range).
 		</p>
 		<p>Picture can be zoomed in/out with Ctrl + mouse wheel.
 			Zooming range is 70%...300% from nominal 10 px/snap unit.
 		</p>
-		<h4>Parameters</h4>
+		<h5>Parameters</h5>
 		<div class="indent1"> <img alt="parameters_active.png" src="images/parameters_active.png">
 			<img alt="parameters_passive.png" src="images/parameters_passive.png">
 			<img alt="parameters_driver.png" src="images/parameters_driver.png">
@@ -1241,7 +1256,7 @@
 			Calculated values are readonly with gray background.
 			See Library blocks.
 		</p>
-		<h4>Variants</h4>
+		<h5>Variants</h5>
 		<p>Variants are different development stages of the crossover or versions for different drivers or DSP gear/app.<br>
 			S# (save) button creates a copy (exact clone) of visible schematic to selected variant memory.
 			All changes are saved automatically to visible variant. No need to click S# button again.<br>
@@ -1254,7 +1269,7 @@
 			#1 is compatible with the oldest project file versions of VituixCAD 2.0.
 		</p>
 		<p><strong>Warning!</strong> Undo buffer is cleared when variant is changed with S/R button.</p>
-		<h3 id="Driver_layout">Driver layout</h3>
+		<h4 id="Driver_layout">Driver layout</h4>
 		<p>Driver layout window allows changing of part #, location (XYZ), rotation (R) and tilt (T) of drivers with table control,
 			or adding new drivers as linear or curved array.</p>
 		<img class="indent1" alt=" driver_layout.png" src="images/driver_layout.png">
@@ -1267,7 +1282,7 @@
 			Magenta dotted line/curve shows locations calculated with line array parameters (in the middle) but not yet accepted to Drivers table.
 		</p>
 		<p>Parameters of line array calculator:</p>
-		<table>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>X mid</td>
@@ -1298,7 +1313,7 @@
 			</tbody>
 		</table>
 		<p>Array types</p>
-		<table>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>Linear |</td>
@@ -1317,7 +1332,7 @@
 			</tbody>
 		</table>
 		<p>Parameters for curved arrays</p>
-		<table>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>Radius</td>
@@ -1349,7 +1364,7 @@
 			New drivers will be added as max.
 			8x8 matrix beginning at constant location 43,9.
 		</p>
-		<h3 id="Creating_library_blocks">Creating library blocks</h3>
+		<h4 id="Creating_library_blocks">Creating library blocks</h4>
 		<p>New library block is created by selecting components from crossover and then File-&gt;Create library block.
 			Block attribute editor opens.
 			Program lists all parameters of selected components into Component parameters grid.
@@ -1399,8 +1414,8 @@
 			Open block with small open button in tool strip on the left.
 			Save button overrides existing block without verification.
 		</p>
-		<h2 id="Room_tab">Room tab</h2>
-		<h3 id="Reflections">Reflections</h3>
+		<h3 id="Room_tab">Room tab</h3>
+		<h4 id="Reflections">Reflections</h4>
 		<p>Response with room reflections visible in CTA-2034 graph can include left side wall, front wall, floor and ceiling, selected with checkboxes in Room tab.
 			Distance from speaker's origin (0,0,0 mm) to reflecting surface and rotation away from left side wall (toe-in) are adjusted with text boxes.
 			Left wall X and Floor Y are negative values.
@@ -1413,7 +1428,7 @@
 		</p>
 		<img class="indent1" alt="room_tab.png" src="images/room_tab.png">
 		<p><strong>Note!</strong> Full 0-180 deg measurement data with Mirror missing is needed to simulate front wall reflection.</p>
-		<h3 id="Driver_offset">Driver offset</h3>
+		<h4 id="Driver_offset">Driver offset</h4>
 		<img class="indent1" alt="driver_offset.png" src="images/driver_offset.png">
 		<p>Simulated horizontal and vertical planes can be rotated -90...+90 deg around speaker's origin (X,Y=0,0) with Planes [deg] parameter.
 			Both simulation orbits of virtual microphone are rotated around Z-axis by given angle phi.
@@ -1428,8 +1443,8 @@
 		</p>
 		<p>Driver instances in crossover are moved by X and Y, rotated by R and tilted by T <u>permanently</u> with Relocate button (which also resets X, Y, R and T).</p>
 		<p>Check 'Rotate 180 deg' to rotate speaker 180 degrees in horizontal plane.</p>
-		<h2 id="Main_Graphs">Graphs</h2>
-		<h3 id="SPL">SPL</h3>
+		<h3 id="Main_Graphs">Graphs</h3>
+		<h4 id="SPL">SPL</h4>
 		<img class="indent1" alt="spl_chart.png" src="images/spl_chart.png">
 		<p>By default, SPL graph shows total SPL, Listening window, target, SPL per individual driver and normal phase.
 			All traces are responses to reference angle, see Frequency responses.
@@ -1458,7 +1473,7 @@
 			This is target for optimizing reference axis response.
 			See Optimize.
 		</p>
-		<h4 id="Chart_traces_and_overlays">Chart traces and overlays</h4>
+		<h5 id="Chart_traces_and_overlays">Chart traces and overlays</h5>
 		<img class="indent1" alt="chart_traces.png" src="images/chart_traces.png">
 		<p><b>Traces...</b> command in context menu of chart opens properties window allowing user to change visibility, description, color(s), line width and dash style of each trace.
 			Selected overlays are removed with Delete sel button.
@@ -1494,7 +1509,7 @@
 			All visible overlays are scaled if none is selected.
 		</p>
 		<p>Total number of traces including overlays is limited to 37 per chart.</p>
-		<h4 id="Copy_image">Copy image</h4>
+		<h5 id="Copy_image">Copy image</h5>
 		<p><b>Copy image</b> command in context menu of chart copies image to the clipboard as bitmap.
 			Legend area with trace names is included.
 			Image size excluding legends is specified in Image export -group in Options window.
@@ -1503,7 +1518,7 @@
 			Legend areas are not included.
 			Image size of each chart is specified in Image export -group in Options window.
 		</p>
-		<h4 id="Export_image">Export image</h4>
+		<h5 id="Export_image">Export image</h5>
 		<p><b>Export image</b> command in context menu of chart exports image to a file.
 			Supported file formats: PNG, BMP, EMF, EXIF, ICON, JPEG, GIF, TIF, WMF, SVG.
 			Recommended formats are PNG and SVG.
@@ -1517,7 +1532,7 @@
 			Legend areas are not included.
 			Image size of each chart is specified in Image export -group in Options window.
 		</p>
-		<h4>Maximum and span</h4>
+		<h5>Maximum and span</h5>
 		<p>Y-scale maximum of SPL, CTA-2034 and unnormalized Directivity charts is adjusted automatically by default.
 			Manual setting with text box is possible by checking SPL max on the left side of SPL chart.
 			Manual value is saved to project file.<br>
@@ -1534,9 +1549,9 @@
 			Exceptions: Directivity index has common span with SPL, and maximum is span - major grid interval.
 			Phase angle has constant Y2-scale +180...-180 deg.
 		</p>
-		<h4>Zooming</h4>
+		<h5>Zooming</h5>
 		<p>Every graph can be zoomed to full size and back to dashboard by double clicking in middle of the chart area.</p>
-		<h3 id="Power_DI">CTA-2034</h3>
+		<h4 id="Power_DI">CTA-2034</h4>
 		<img class="indent1" alt="power+di_chart.png" src="images/power+di_chart.png">
 		<p>This graph shows On-axis/Ref axis total SPL (WindowFrame), Listening Window (YellowGreen),
 			Predicted In-room /CTA-2034-A or response with 1st order room reflections (DarkOrange),
@@ -1559,7 +1574,7 @@
 			This is target for power response optimizing.
 			See Optimize.
 		</p>
-		<h3 id="Directivity">Directivity</h3>
+		<h4 id="Directivity">Directivity</h4>
 		<div class="indent1">
 			<img alt="directivity_line.png" src="images/directivity_line.png">
 			<img alt="directivity_waterfall.png" src="images/directivity_waterfall.png">
@@ -1606,7 +1621,7 @@
 			Phi range is -45...hor...+45 deg when Horizontal plane is selected from context menu of Directivity chart.
 			Phi range is +45...ver...+135 deg when Vertical plane is selected from context menu.
 		</p>
-		<h3 id="Group_delay_Phase">Group delay &amp; Phase</h3>
+		<h4 id="Group_delay_Phase">Group delay &amp; Phase</h4>
 		<img class="indent1" alt="gd+phase_chart.png" src="images/gd+phase_chart.png">
 		<p>This graph shows Normal group delay (WindowFrame), Normal phase (gray) and phase response of individual drivers to reference angle.
 			Optional Excess group delay (SteelBlue) is enabled by checking Show Excess group delay in context menu.
@@ -1618,7 +1633,7 @@
 		<p>See tooltips or Traces... to identify curves.
 			See Chart overlays.
 		</p>
-		<h3 id="Filter">Filter</h3>
+		<h4 id="Filter">Filter</h4>
 		<img class="indent1" alt="filter_chart.png" src="images/filter_chart.png">
 		<p>This graph shows magnitude of filter transfer function of individual drivers.
 			In addition, graph shows magnitude and phase response of selected active block (Highlight color).</p>
@@ -1630,7 +1645,7 @@
 			This is target for optimizing filter transfer function of driver.
 			See Optimize.
 		</p>
-		<h3 id="Impedance">Impedance</h3>
+		<h4 id="Impedance">Impedance</h4>
 		<img class="indent1" alt="impedance_chart.png" src="images/impedance_chart.png">
 		<p>This graph shows generator's load impedance magnitude (WindowFrame) and phase (Gray).
 			In addition, graph shows total and individual load impedance of active buffers in active multi-way system,
@@ -1644,12 +1659,12 @@
 			to identify curves.
 			See Chart overlays.
 		</p>
-		<h2 id="Optimizer">Optimizer</h2>
+		<h3 id="Optimizer">Optimizer</h3>
 		<p>Optimizer adjusts selected filter parameters/component values to shape total reference axis response or listening window and power response or predicted in-room,
 			or driver's on-axis response or transfer function magnitude at driver terminals to target specified by user.
 			Optimizer window can be activated with context menu of SPL or CTA-2034 chart.
 		</p>
-		<h3 id="Target_response">Target response</h3>
+		<h4 id="Target_response">Target response</h4>
 		<br>
 		<img class="indent1" alt="target_response.png" src="images/target_response.png">
 		<p>Frequency range included in optimization is limited with two frequency values.
@@ -1685,7 +1700,7 @@
 			crossover can include single G(f) block and active buffer for the speaker or each driver/way,
 			and response is shaped automatically to target; ideal textbook curve with tilt and HP/LP or a file.
 		</p>
-		<h3 id="Optimizing">Optimizing</h3>
+		<h4 id="Optimizing">Optimizing</h4>
 		<img class="indent1" alt="optimizing.png" src="images/optimizing.png">
 		<p>Reference axis response of selected driver can be adjusted automatically to the target in SPL graph by selecting 'Ref axis response of Driver'.
 			Select driver from the list box on the right and then 'Ref axis response of Driver'.
@@ -1741,14 +1756,14 @@
 			Initial maximum is 300 evaluations.
 			Simple problems with only few parameters to optimize could be solved with less than 100 evaluations.
 		</p>
-		<h2 id="Parts_list">Parts list</h2>
+		<h3 id="Parts_list">Parts list</h3>
 		<br>
 		<img class="indent1" alt="parts_list.png" src="images/parts_list.png">
 		<p>Parts list shows passive components, drivers and parameter values in a grid.
 			List can be copied to your favorite spreadsheet or text editor with Copy command or Ctrl+A, Ctrl+C.
 			Refresh updates the list in case components or values have changed after window was opened.
 		</p>
-		<h2 id="Impulse_response">Impulse response</h2>
+		<h3 id="Impulse_response">Impulse response</h3>
 		<p>Ref axis response or input transfer function of driver or output of buffer or total Ref axis SPL or Listening window can be exported to impulse response in time domain.
 			Typical application is to produce impulse response as wav-file for speaker controller with DSP FIR support or convolution plugin.
 		</p>
@@ -1845,7 +1860,7 @@
 			Time scale can be expanded and compressed with arrow buttons.
 			Graph can be zoomed to full window for design-time preview.
 		</p>
-		<h2 id="Power_dissipation">Power dissipation</h2>
+		<h3 id="Power_dissipation">Power dissipation</h3>
 		<p>Graph shows output spectrum of generator and buffers/power amplifiers in active multi-way,
 			and power dissipation or current (mA) or voltage of drivers and passive LCR components in crossover network.
 			Quantity is selected from View group.
@@ -1880,7 +1895,7 @@
 			</li>
 		</ul>
 		
-		<h2 id="Preference_rating">Preference rating</h2>
+		<h3 id="Preference_rating">Preference rating</h3>
 		<img class="indent1" alt="preference_rating.png" src="images/preference_rating.png">
 		<p>Purpose of Preference rating (in VituixCAD) is to provide simple target setting and error calculation for the Optimizer.</p>
 		<p>Rating is calculated with customizable equation using variables described in patent application
@@ -1942,9 +1957,9 @@
 		</p>
 		<hr>
 		
-		<h2 id="Options">Options</h2>
+		<h3 id="Options">Options</h3>
 		<img class="indent1" alt="options.png" src="images/options.png">
-		<h3 id="Angle_parsing_from_filename">Angle parsing from filename</h3>
+		<h4 id="Angle_parsing_from_filename">Angle parsing from filename</h4>
 		<p>To allow VituixCAD to parse measurement angles and axis from frequency response files, you have to define file naming format/syntax.</p>
 		<p><strong>Generic 2D</strong> is configurable option allowing user to specity how plane and angle value are coded in frequency response filename.
 			Plane keywords define how to distinguish between horizontal and vertical axis.
@@ -1984,7 +1999,7 @@
 			Check by default with Klippel NFS.
 		</p>
 		<p>Test tool is provided for testing the syntax.</p>
-		<h3 id="Options_Frequency_responses">Frequency responses</h3>
+		<h4 id="Options_Frequency_responses">Frequency responses</h4>
 		<p>Mirror missing defines if VituixCAD should mirror missing measurement data:</p>
 		<ul>
 			<li>Measurement to equal positive angle selected if negative angle is not available (or vice versa)</li>
@@ -2055,13 +2070,13 @@
 			Valid list separators are space, comma or semicolon.
 			Angles should be divisible by Angle step &gt; 0.
 		</p>
-		<h3 id="Display">Display</h3>
+		<h4 id="Display">Display</h4>
 		<p>Font for crossover schematic and visibility of tooltips are selectable.
 			Check 'Dark mode' to set black background to charts, crossover schematic and room images.
 			Note! Toggling of Dark mode sets default colors to all charts.
 			Check 'Show imperial as tooltip' to show length/diameter/radius, area and volume in imperial unit as a tooltip. 
 		</p>
-		<h3 id="Power_response_DI_calculation">Power response &amp; DI calculation</h3>
+		<h4 id="Power_response_DI_calculation">Power response &amp; DI calculation</h4>
 		<p><strong>Intensity on spherical surface</strong> is normally selected for common sized single or multiway speakers.
 			Intensity on spherical surface around speaker is calculated from radial measurements in horizontal and vertical planes.
 		</p>
@@ -2096,7 +2111,7 @@
 			Off-axis angles loaded to drivers are simulated when 0 deg is selected.
 			Initial value is 10 deg.
 		</p>
-		<h3 id="Image_export">Image export</h3>
+		<h4 id="Image_export">Image export</h4>
 		<p><strong>Single W x H</strong> is size of copied/exported chart image.
 			Default width is 720 px.
 		</p>
@@ -2125,11 +2140,11 @@
 		Adjust opacity with text box. Default is 30 &percnt;.
 		Check Show to print logo in charts on display. Default is unchecked to increase speed of UI.
 		Default VituixCAD logo is printed if filename is empty and position is other than None.</p>		
-		<h3 id="Graph_scales">Graph scales</h3>
-		<h4>Frequency axis</h4>
+		<h4 id="Graph_scales">Graph scales</h4>
+		<h5>Frequency axis</h5>
 		<p>Internal frequency range is fixed 5...39794 Hz with density of 48 points/octave,
 			but you can define initial visible scale with minimum 5...5000 Hz and maximum 40...40000 Hz.</p>
-		<h4>Magnitude axis</h4>
+		<h5>Magnitude axis</h5>
 		<p><strong>Excursion max</strong> defines initial upper limit of cone excursion graph in Enclosure tool.</p>
 		<p><strong>Filter gain max</strong> defines initial upper limit and Filter gain span controls initial vertical scale of filter gain graphs.</p>
 		<p><strong>Force/accel max</strong> defines initial upper limit of reaction force or cone acceleration in Enclosure tool.</p>
@@ -2138,7 +2153,7 @@
 		<p><strong>Power max</strong> defines initial upper limit of amplifier's output power to nominal load in Enclosure tool.</p>
 		<p><strong>SPL/Directivity span</strong> controls initial vertical scale of SPL, CTA-2034 and Directivity graphs.</p>
 		<p><strong>Velocity max</strong> defines initial upper limit of vent air velocity graph in Enclosure tool.</p>
-		<h3 id="External_tools_and_directories">External tools and directories</h3>
+		<h4 id="External_tools_and_directories">External tools and directories</h4>
 		<p>Paths in the text fields define applications VituixCAD should open when pressing corresponding buttons/menu items.
 			Select application by clicking folder button or dropping file into text box.
 		</p>
@@ -2157,7 +2172,7 @@
 				Another valid option is C:\Users\Public\Documents\VituixCAD.
 			</li>
 		</ul>
-		<h3 id="CTA-2034-A">CTA-2034-A button</h3>
+		<h4 id="CTA-2034-A">CTA-2034-A button</h4>
 		<p>Button sets defaults for ANSI/CTA-2034-A directivity report with CTA-2034 chart:</p>
 		<ul>
 			<li>Interpolate checked</li>
@@ -2170,19 +2185,19 @@
 			<li>CTA-2034-A power weights checked</li>
 			<li>Angle step to 10 deg if not 5 or 10 deg.</li>
 		</ul>
-		<h3 id="Save_overlays">Save chart overlays to project</h3>
+		<h4 id="Save_overlays">Save chart overlays to project</h4>
 		<p>Check 'Save chart overlays to project' to save and load overlays from project file (.vxp).
 			Uncheck to retain existing overlays when project is opened and not save to project file.
 		</p>
-		<h3 id="Check_for_updates">Check for updates</h3>
+		<h4 id="Check_for_updates">Check for updates</h4>
 		<p>Updates are checked automatically when program starts if 'Check for upodates' is checked.</p>
 
 		<hr>
 
-		<h1 id="Tools">Tools</h1>
-		<h2 id="Enclosure_tool">Enclosure tool</h2>
+		<h2 id="Tools">Tools</h2>
+		<h3 id="Enclosure_tool">Enclosure tool</h3>
 		<img alt="enclosure_tool.png" src="images/enclosure_tool.png">
-		<h3 id="Driver_database">Driver database</h3>
+		<h4 id="Driver_database">Driver database</h4>
 		<p>VituixCAD can read either local or online database from https://kimmosaunisto.net/.
 			Adding, modifying and removing drivers are possible with local database.
 			Databases mirrored to cloud drive such as Microsoft OneDrive or continuously mounted to network server are handled just like real local databases.
@@ -2208,7 +2223,7 @@
 			Filtering criteria for passive radiators is available when PR is checked.
 		</p>
 		<p>Driver database includes the following fields:</p>
-		<table>
+		<table class="table">
 			<tbody>
 				<tr>
 					<td>Manufacturer</td>
@@ -2404,7 +2419,7 @@
 			Database as .txt file can be maintained also with external tool such as Microsoft Excel,
 			provided that original file format including column headers, measurement units and <b>decimal symbol</b> are not modified.
 		</p>
-		<h4>Calculation of Thiele/Small parameters</h4>
+		<h5>Calculation of Thiele/Small parameters</h5>
 		<p><img class="indent1" alt="calc_ts_parameters.png" src="images/calc_ts_parameters.png"></p>
 		<p>Required parameters for all calculation methods are driver's Dd [mm] or Sd [cm2] and free air impedance response measurement.</p>
 		<p>Re [Ohm] and second impedance response measured in undamped sealed enclosure with known volume are needed for Sealed volume method.</p>
@@ -2441,7 +2456,7 @@
 			See tooltip of curves for more information.
 		</p>
 		<p>Results can be accepted to previous Edit parameters/Add new driver window with Apply button.</p>
-		<h4>Impedance models</h4>
+		<h5>Impedance models</h5>
 		<p>Enclosure tool can use two different impedance models:</p>
 		<ol>
 			<li><strong>Basic impedance model</strong>.
@@ -2473,7 +2488,7 @@
 		</ol>
 		<p>Voice coil inductance (with losses) is included in frequency response calculation by checking <strong>Show effect of inductance</strong> in context menu of SPL chart.</p>
 		<img class="indent1" alt="enclosure_spl_context.png" src="images/enclosure_spl_context.png">
-		<h4>Database update</h4>
+		<h5>Database update</h5>
 		<p>Local driver database can be updated with data on the clipboard or local file or online database @kimmosaunisto.net.
 			Data format can be either xml or tab delimited text.
 			Order and amount of columns in the source data and destination (local) database must match if the source data is not xml and does not have header line with parameter names.
@@ -2493,7 +2508,7 @@
 		<p>Text to Updated field overrides existing text.
 			Text in the source data is copied if text box is left empty.
 		</p>
-		<h3 id="Driver_configuration">Driver configuration</h3>
+		<h4 id="Driver_configuration">Driver configuration</h4>
 		<p>Drop down menu provides selection for amount of drivers.
 			If more than one driver is selected, radio buttons on the right control how drivers are connected.
 		</p>
@@ -2513,46 +2528,43 @@
 		<p>Manufacturer and Model of previously selected driver is visible in text box.
 			Volume excursion capacity Sd*Xmax*N is shown in Vd [cm3] field.
 		</p>
-		<h3 id="Radiator_type">Radiator type</h3>
+		<h4 id="Radiator_type">Radiator type</h4>
 		<p>Radiator types supported by Enclosure tool:</p>
-		<table>
-			<tbody>
-				<tr>
-					<td>Infinite baffle<br>
+		<div class="container">
+		<div class="row">
+			<div class="col">Infinite baffle<br>
 						<img alt="infinite_baffle.png" src="images/infinite_baffle.png">
-					</td>
-					<td>Closed<br>
+			</div>
+			<div class="col">Closed<br>
 						<img alt="closed_box.png" src="images/closed_box.png">
-					</td>
-					<td>Bass reflex<br>
+			</div>
+			<div class="col">Bass reflex<br>
 						<img alt="bass_reflex.png" src="images/bass_reflex.png">
-					</td>
-					<td>Double tuned reflex<br>
+			</div>
+			<div class="col">Double tuned reflex<br>
 						<img alt="double_tuned_reflex.png" src="images/double_tuned_reflex.png">
-					</td>
-					<td><br></td>
-				</tr>
-				<tr>
-					<td>Passive radiator<br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">Passive radiator<br>
 						<img alt="passive_radiator.png" src="images/passive_radiator.png">
-					</td>
-					<td>Band pass type 1<br>
+			</div>
+			<div class="col">Band pass type 1<br>
 						<img alt="band-pass_type-1.png" src="images/band-pass_type-1.png">
-					</td>
-					<td>Band pass type 1P<br>
+			</div>
+			<div class="col">Band pass type 1P<br>
 						<img alt="band-pass_type-1p.png" src="images/band-pass_type-1p.png">
-					</td>
-					<td>Band pass type 2<br>
+			</div>
+			<div class="col">Band pass type 2<br>
 						<img alt="band-pass_type-2.png" src="images/band-pass_type-2.png">
-					</td>
-					<td>Band pass type 3<br>
+			</div>
+			<div class="col">Band pass type 3<br>
 						<img alt="band-pass_type-3.png" src="images/band-pass_type-3.png">
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<h3 id="Enclosure_Tabs">Tabs</h3>
-		<h4>Align - Closed and Bass reflex radiator alignment</h4>
+			</div>
+		</div>
+		</div>
+		<h4 id="Enclosure_Tabs">Tabs</h4>
+		<h5>Align - Closed and Bass reflex radiator alignment</h5>
 		<img class="indent1" alt="align_closed.png" src="images/align_closed.png">
 		<p>Closed box is aligned by selecting or entering Qtc.<br>
 			Optional high alarm limit for non-linearity [% on Xmax] due to air compression is available.
@@ -2573,7 +2585,7 @@
 			and enable it by checking Diffraction response.
 		</p>
 		<p>Diffraction simulator is executed by clicking Baffle step button <img alt="baffle_step_button.png" src="images/baffle_step_button.png">.</p>
-		<h4>Enclosure - Parameters for different radiator types</h4>
+		<h5>Enclosure - Parameters for different radiator types</h5>
 		<div class="indent1">
 			<img alt="enclosure_reflex.png" src="images/enclosure_reflex.png">
 			<img alt="enclosure_passive.png" src="images/enclosure_passive.png">
@@ -2595,7 +2607,7 @@
 			Volume excursion capacity Sd*Xmax*N is shown in Vd [cm3] field.
 		</p>
 		
-		<h4>Solving parameters of passive and bass reflex radiators</h4>
+		<h5>Solving parameters of passive and bass reflex radiators</h5>
 		<img class="indent1" alt="passive_solver.png" src="images/passive_solver.png">
 		<p>Some parameters of passive/vented radiators can be specified by comparing simulated impedance response
 			to impedance response measured from known test system.
@@ -2631,7 +2643,7 @@
 				Before closing Edit parameters window with OK button, enter Cms=0 and Rms=0 that program would calculate correct values from iterated Qmp, Vap, Mmp and fs.</li>
 		</ul>
 		
-		<h4>Filter - Optional filter</h4>
+		<h5>Filter - Optional filter</h5>
 		<img class="indent1" alt="filter_tab.png" src="images/filter_tab.png">
 		<p>Filter tab enables adding max. six active filter stages, L+C+R in series with the driver(s) and L+C+R in parallel with the driver(s):</p>
 		<ul>
@@ -2660,7 +2672,7 @@
 			Parallel L+C+R branch is set to open if all its components are disabled.</p>
 		<p>Filter settings are saved to enclosure project file (.vxe) only. Not to user config for the next session.</p>
 		
-		<h4>Info - Acoustical and electrical equivalent parameters</h4>
+		<h5>Info - Acoustical and electrical equivalent parameters</h5>
 		<img class="indent1" alt="info_tab.png" src="images/info_tab.png">
 		<p>Info tab shows enclosure image, calculated acoustical parameters of driver, boxes and ports.
 			Optional display of electrical equivalent values is available.
@@ -2676,7 +2688,7 @@
 			Path for LTspice executable needs to be defined in Options window.
 		</p>
 		<p>Note! Effect of voice coil inductance is not shown in SPL curve.</p>
-		<h3 id="Export_Save_Open_functions">Export, Save and Open functions</h3>
+		<h4 id="Export_Save_Open_functions">Export, Save and Open functions</h4>
 		<p>Total SPL to half space and impedance response can be exported if you choose to use them in simulating loudspeaker driver instead of acoustic and electrical measurements.
 			Impedance response (txt/zma) is routed to driver selected in Drivers tab in the main program by checking Feed before exporting.
 		</p>
@@ -2684,7 +2696,7 @@
 			Decimal symbol and list separator (for csv file) are specified in Windows Control panel.
 		</p>
 		<p>Enclosure project is saved with Save Project button, and opened with Open Project button or Enclosure project table (arrow down button).</p>
-		<h4>Enclosure project table</h4>
+		<h5>Enclosure project table</h5>
 		<img class="indent1" alt="enclosure_project_table.png" src="images/enclosure_project_table.png">
 		<p>Enclosure project list can be changed with Open button.
 			Default list file is \Users\Public\Documents\VituixCAD\Enclosure\VituixCAD_Projects.txt.
@@ -2695,7 +2707,7 @@
 			Projects open while browsing the list by checking <strong>Auto open</strong>.
 			Project opens and list window closes by double-clicking row also when Auto open is unchecked.
 		</p>
-		<h3 id="Enclosure_Graphs">Graphs</h3>
+		<h4 id="Enclosure_Graphs">Graphs</h4>
 		<p>Frequency axis limits can be adjusted with text boxes in the bottom.
 			Every graph can be zoomed to full size and back to dashboard by double clicking in middle area of particular graph.
 			Color coding of traces is defined below dashboard.
@@ -2724,7 +2736,7 @@
 			See Chart overlays.
 		</p>
 		<hr>
-		<h2 id="Diffraction_tool">Diffraction tool</h2>
+		<h3 id="Diffraction_tool">Diffraction tool</h3>
 		<p><img class="indent1" alt="diffraction_tool.png" src="images/diffraction_tool.png"></p>
 		<p>Diffraction simulator calculates cabinet impact or full space frequency response of driver(s) in a baffle.
 			Simulation is based on simple ray theory: each driver is a point source sending 72 rays towards baffle edges with fixed 5 deg steps.
@@ -2736,7 +2748,7 @@
 			Baffle can contain up to 50 drivers with equal dimensions.
 			Simplified room response with floor and side wall reflections is available.
 		</p>
-		<h4>Initializing</h4>
+		<h5>Initializing</h5>
 		<p>Start baffle designing by entering main dimensions; width, height and number of corners.
 			Select driver shape; circular or rectangular.
 			Enter effective diameter Dd or area Sd for circular or width and height for rectangular,
@@ -2761,7 +2773,7 @@
 			Y-scale is adjusted automatically.
 		</p>
 		<p>Check Open baffle for dipole speaker with thin I-baffle.</p>
-		<h4>Adjusting</h4>
+		<h5>Adjusting</h5>
 		<p>Individual objects; corners, drivers and microphone are selected by clicking left button above the image.
 			Selected object is highlighted and location (X, Y) is visible in View group.
 			Location can be adjusted by dragging or entering coordinates or pressing arrow keys in the text boxes.
@@ -2780,7 +2792,7 @@
 		<p>Edge radius and Driver Dd or Sd, Width and Height can be adjusted after project initialization by entering value or pressing up/down keys in the text boxes.
 			Drawing and cabinet impact response graph are updated while adjusting.
 		</p>
-		<h4>Mic/listening point</h4>
+		<h5>Mic/listening point</h5>
 		<p>Microphone symbol represents listening point at Axis Distance.
 			Enter 5000-30000 mm for far field simulation to get full baffle loss.
 			Baffle can be rotated horizontally and vertically by entering Angle Hor or Angle Ver, or pressing up/down keys in the text boxes.
@@ -2789,13 +2801,13 @@
 			Vertical rotation of baffle is positive to face up.
 			Sign of rotation angles are changed while directivity export for compatibility with measurement data.
 		</p>
-		<h4>Reflections</h4>
+		<h5>Reflections</h5>
 		<p>Check Floor and enter floor elevation in mm to include floor bounce in frequency response.
 			Side wall reflection is included by checking Wall.
 			Negative X coordinate locates wall on the left side.
 			Enter absorption within 0...20 dB to reduce amplitude of boundary reflections.
 		</p>
-		<h4>File functions</h4>
+		<h5>File functions</h5>
 		<p>Save baffle project by pressing Save button.
 			File extension is .vxb, but it's human-readable xml file containing main dimensions and location of corners and drivers.
 			You can print the file for helping final enclosure design.
@@ -2809,7 +2821,7 @@
 			Enter root file name for responses.
 			Program extends file name with horizontal/vertical keyword and angle, using coding defined in Options window.
 		</p>
-		<h4>Graph</h4>
+		<h5>Graph</h5>
 		<p>See tooltips or Traces...
 			to identify curves.
 			See Chart overlays.
@@ -2820,12 +2832,12 @@
 			<li>Long planar radiator should be constructed by stacking multiple small rectangular drivers with Step = Height.</li>
 		</ol>
 		<hr>
-		<h2 id="Convert_IR_to_FR">Convert IR to FR</h2>
+		<h3 id="Convert_IR_to_FR">Convert IR to FR</h3>
 		<img class="indent1" alt="convert_ir_to_fr.png" src="images/convert_ir_to_fr.png">
 		<p>Conversion tool imports multiple impulse response (IR) files and converts to frequency response (FR) files.
 			It is recommended that all files in the list are measured with common parameters and settings: rotation center, distance, level, signal type, sampling rate, MLS sequence length etc.
 		</p>
-		<h4>Impulse response files</h4>
+		<h5>Impulse response files</h5>
 		<p>Load impulse responses to file list with Open button or Drag&amp;Drop.
 			More measurement files can be added to the list by pressing Shift key while dropping or clicking Open button in file selection dialog box.
 			Supported IR file formats are ARTA .pir, CLIO Standard/QC .mls/mlsi (4.x, 6.x, 7.x), CLIO Pocket .crp, WAV mono/stereo
@@ -2850,7 +2862,7 @@
 		<p>Impulse responses are possible to save as space delimited text, csv or MLSSA text files to selected Directory by pressing small export button on the left size of Far 1 button.</p>
 		<p>FFT session is possible to save as vxf-file with 'Save session' button, and load with 'Open session' button.
 			IR file list and FFT analysis, Output and graph settings are saved to session file.</p>
-		<h4>FFT analysis</h4>
+		<h5>FFT analysis</h5>
 		<p>Impulse response is multiplied by window function (sample by sample) before conversion to frequency domain with Fast Fourier Transform (FFT).
 			Typical purpose of window function is to crop room reflections from measurement data.
 			Window function could have one or two sides.
@@ -2879,7 +2891,7 @@
 		<p>Effect of possible DC voltage in the input or ouput of sound card can be reduced by checking <strong>DC offset</strong>.
 			Average IR level before time window (max. 270 samples) is calculated and subtracted from all IR samples.
 		</p>
-		<h4>Output</h4>
+		<h5>Output</h5>
 		<p>Boundaries of displayed and exported frequency responses are adjusted with <strong>Frequency range</strong> text boxes.
 			Widest possible range is from 5 Hz to 40 kHz or sample rate / 2 (Nyquist frequency) which one is lower.
 			Low frequencies may need cropping due to noise or other inaccuracies if measured object does not pass low frequencies.
@@ -2917,7 +2929,7 @@
 			Only the selected response is exported when Ctrl key is pressed while clicking Export button.
 			Responses are loaded for currently selected driver in the main program if <strong>Feed speaker</strong> is checked.
 		</p>
-		<h4>Impulse response graph (upper)</h4>
+		<h5>Impulse response graph (upper)</h5>
 		<p>Impulse graph contains impulse response (blue), optional impulse envelope (ETC, dark green), impulse dBFS (dark cyan) and step response (orange red) and overlays,
 			window function (gray), three cursors: Left window start (orange), Reference/Start time (magenta) and Right window stop (red).
 			Cursor legend shows time (ms), impulse magnitude (Pa/Ohm/Volt) and envelope/impulse dB at cross cursor position if cursor dragging is not on.
@@ -2931,7 +2943,7 @@
 			See tooltips or Traces... to identify curves. See Chart overlays.
 		</p>
 		<p></p>
-		<h4>Frequency response graph (lower)</h4>
+		<h5>Frequency response graph (lower)</h5>
 		<p>Frequency response graph shows magnitude (blue), phase in degrees (gray), optional minimum phase response (lime),
 			excess phase response (steel blue), overlays and 'gating frequency' with vertical line at 1.0/right_window (magenta).
 			Result below gating frequency could be unreliable and too smoothed, but it depends on shape of impulse response and selected window function.
@@ -2939,7 +2951,7 @@
 			See tooltips or Traces... to identify curves. See Chart overlays.
 		</p>
 		<hr>
-		<h2 id="Merger_tool">Merger tool</h2>
+		<h3 id="Merger_tool">Merger tool</h3>
 		<img class="indent1" alt="merger_tool.png" src="images/merger_tool.png">
 		<p>Merger tool merges frequency responses using two separate sections: Low frequency part and High frequency part.
 			Low frequency responses can be either far field (4pi) measurements or near field (2pi) measurements with baffle simulation and measured or textbook directivity.
@@ -2951,7 +2963,7 @@
 			to identify curves.
 			See Chart overlays.
 		</p>
-		<h4>Low frequency part with Near field measurements</h4>
+		<h5>Low frequency part with Near field measurements</h5>
 		<p>Merger tool merges near field measurements with diffraction simulation, measured directivity and
 			optional textbook directivity to time-windowed far field measurements.
 		<!--or half space (2pi) + diffraction simulation or full space (4pi) simulation	
@@ -2991,7 +3003,7 @@
 			Baffle effect response simulated to the longest ever possible listening distance is selected into this text box.
 			Response type must be 'baffle step' i.e. scaling 0...+6 dB.
 		</p>		
-		<h4>Low frequency part with Far field measurements</h4>
+		<h5>Low frequency part with Far field measurements</h5>
 		<p>Low frequency response list must have equal off-axis angles (with the same angle coding in filenames) with high frequency response list.
 			Otherwise LF and HF responses cannot be paired.
 		</p>
@@ -3000,7 +3012,7 @@
 			Enter Distance of low frequency and high frequency measurements to calculate scaling of LF responses automatically.
 			Scaling can be adjusted via Scale text box by entering a value or by Up/Down keys.
 		</p>
-		<h4>High frequency part</h4>
+		<h5>High frequency part</h5>
 		<p>Far field measurements can be added by clicking folder button or dropping files into list.
 			On-axis response is selected by checking 'On-axis' column in response file list.
 			Default on-axis response is 0 degrees in horizontal plane.
@@ -3011,7 +3023,7 @@
 			Baffle effect response simulated to actual measurement distance of far field High frequency responses is selected into this text box.
 			Response type must be 'baffle step' i.e. scaling 0...+6 dB.
 		</p>
-		<h4>Transition</h4>
+		<h5>Transition</h5>
 		<p>Transition from low frequency to high frequency part can be adjusted manually via Frequency text box, graph cursor or Up/Down keys.
 		</p>
 		<p>Warning is given with red background color if transition frequency exceeds maximum near field frequency of the largest low frequency radiator.
@@ -3019,7 +3031,7 @@
 		</p>
 		<p>Magnitude and phase blending range between low and high frequency parts can be selected from list box: none, 1/2, 1, 2, 3 or 4 octaves.</p>
 		<p>Delay of low frequency part is calculated automatically on transition frequency change but can be adjusted manually.</p>
-		<h4>Output</h4>
+		<h5>Output</h5>
 		<p>Choose which items you want to output.
 			Create merged responses will combine low frequency and high frequency responses into individual response files.
 			Extended data will combine LF and HF responses into a single file, having LspCAD 6 extended data format.
@@ -3042,20 +3054,20 @@
 		</p>
 		<p>Output file format is selected with TXT, FRD and LMS ascii radio buttons.
 			Result files are saved to destination directory selected with browse folder dialog.</p>
-		<h4>Save and Open</h4>
+		<h5>Save and Open</h5>
 		<p>Merger project can be saved with Save button in the bottom left corner.
 			File extension is vxm, internally XML.
 		</p>
 		<p>Saved merger project can be opened with Open button or dropping vxm-file into Merger tool window.</p>
 		<hr>
-		<h2 id="Calculator_tool">Calculator tool</h2>
+		<h3 id="Calculator_tool">Calculator tool</h3>
 		<img class="indent1" alt="calculator_tool.png" src="images/calculator_tool.png">
 		<p>Calculator tool is a generic math tool for frequency response file processing.
 			Most of the math skills required for speaker simulation are included in Enclosure, Merger and Diffraction tools and crossover simulator.
 			Calculator tool provides some additional functions and flexibility to process calibration files,
 			preprocess measurements before simulation or analyze complete speaker or a single driver.
 		</p>
-		<h3 id="Calculator_Responses">Responses</h3>
+		<h4 id="Calculator_Responses">Responses</h4>
 		<p>Primary response list is 'A responses'.
 			It accepts multiple responses.
 			'B response' is single response.
@@ -3075,25 +3087,25 @@
 			It is needed for directivity and power response calculation.
 			See Options for more information.
 		</p>
-		<h3 id="Multiple_output">Multiple output</h3>
+		<h4 id="Multiple_output">Multiple output</h4>
 		<p>Functions for each input response A, producing multiple result responses:</p>
-		<h4>Add A + B</h4>
+		<h5>Add A + B</h5>
 		<p>Responses A added by response B.</p>
 		<p>Default result filename prefix is AddAB.</p>
 		<ul>
 			<li>Add subwoofer response (B) to responses of main speaker (A).</li>
 		</ul>
-		<h4>Subtract A - B</h4>
+		<h5>Subtract A - B</h5>
 		<p>Responses A subtracted by response B.</p>
 		<p>Default result filename prefix is SubAB.</p>
-		<h4>Multiply A * B</h4>
+		<h5>Multiply A * B</h5>
 		<p>Responses A are multiplied by response B.</p>
 		<p>Default result filename prefix is MulAB.</p>
 		<ul>
 			<li>Create far field response by multiplying near field measurements (A) with cabinet diffraction simulation (B).</li>
 			<li>Test equalizer, high pass or low pass filter by multiplying raw responses (A) with filter transfer function (B).</li>
 		</ul>
-		<h4>Divide A / B</h4>
+		<h5>Divide A / B</h5>
 		<p>Responses A are divided by response B.</p>
 		<p>Default result filename prefix is DivAB.</p>
 		<ul>
@@ -3101,16 +3113,16 @@
 			<li>Correct punch of uncalibrated measurements (A) by multiplying with calibration file,
 				representing total frequency response of your measurement system (B).</li>
 		</ul>
-		<h4>Divide B / A</h4>
+		<h5>Divide B / A</h5>
 		<p>Response B is divided by responses A.</p>
 		<p>Default result filename prefix is DivBA.</p>
-		<h4>Divide A / frequency</h4>
+		<h5>Divide A / frequency</h5>
 		<p>Responses A magnitude is divided by frequency.</p>
 		<p>Default result filename prefix is DivAf.</p>
 		<ul>
 			<li>Calculate cone excursion response from near field measurement (A) by dividing each magnitude value with associate frequency.</li>
 		</ul>
-		<h4>Average by off-axis angle A</h4>
+		<h5>Average by off-axis angle A</h5>
 		<p>Calculates average of the same plane and angle.
 			This is handy when crossover is designed with several driver samples having some real life tolerances i.e. differences in frequency responses.
 			All measurements of drives samples are loaded to A responses.
@@ -3121,20 +3133,20 @@
 			<b>Note!</b> 'Angle parsing from filename' settings in Options must match with loaded frequency response filenames to get correct values to Plane and Angle columns.</p>
 		<p>Default result filename prefix is AvgByDir, followed by plane and off-axis angle of the group.
 			Angle coding uses current 'Angle parsing from filename' settings in Options (so you can also change angle coding e.g. from 3D balloon to generic 2D).</p>
-		<h4>Mirror A</h4>
+		<h5>Mirror A</h5>
 		<p>Responses A mirroring aka vertical flipping over entered dB value.</p>
 		<p>Default result filename prefix is Mir.</p>
 		<ul>
 			<li>Create equalizer target response by mirroring raw response over entered level.</li>
 			<li>Create correction response by mirroring total frequency response of your measurement system.</li>
 		</ul>
-		<h4>Normalize A</h4>
+		<h5>Normalize A</h5>
 		<p>Responses A normalizing to magnitude of the first response A at entered frequency.</p>
 		<p>Default result filename prefix is Norm.</p>
 		<ul>
 			<li>Reduce excess directivity of time-windowed off-axis responses by normalizing responses at 40 Hz of on-axis response in case you are sure that radiator is perfect omni until 40 Hz.</li>
 		</ul>
-		<h4>Scale, Delay, Invert A</h4>
+		<h5>Scale, Delay, Invert A</h5>
 		<p>No calculation - just responses A magnitude scaling, time shifting and polarity inversion.</p>
 		<p>Default result filename prefix is Sca.</p>
 		<ul>
@@ -3146,7 +3158,7 @@
 			<li>Time shifting of measurements (A) if time reference (0 s) point is at the mic capsule or starting point of IR time window was too much before impulse peak.</li>
 			<li>Invert measurements (A) if mic polarity was inverted while measurement or your mic &amp; preamp combination is constantly inverting.</li>
 		</ul>
-		<h4>Minimum phase A</h4>
+		<h5>Minimum phase A</h5>
 		<p>Responses A converted to minimum-phase.
 			Response tails below 5 Hz and above 40 kHz are estimated by the first and last 1/2 octaves.
 			Response tails can also be specified manually by checking Lower tail and Higher tail and entering cropping frequency and slope in dB/oct in Response tails group.
@@ -3155,10 +3167,10 @@
 			Check Maintain delay and enter frequency where phase shift should be equal to original response.
 		</p>
 		<p>Default result filename prefix is MP.</p>
-		<h4>Group delay A</h4>
+		<h5>Group delay A</h5>
 		<p>Responses A group delay in milliseconds.</p>
 		<p>Default result filename prefix is GD.</p>
-		<h4>Real A</h4>
+		<h5>Real A</h5>
 		<p>Responses A converted to real: phase angle is set to 0 deg or -180 deg if Invert is checked.</p>
 		<p>Default result filename prefix is Re.</p>
 		<ul>
@@ -3167,13 +3179,13 @@
 			</li>
 			<li>Create full impedance response for ideal resistive component from plain magnitude response.</li>
 		</ul>
-		<h4>Multiply B * A / A(0)</h4>
+		<h5>Multiply B * A / A(0)</h5>
 		<p>Creates off-axis responses for measured or captured on-axis response B with directivity information in responses A.
 			Directivity data can be simulated with Diffraction tool or compatible set of far field measurements.
 			Response A to 0 degrees is reference in directivity calculation.
 		</p>
 		<p>Default result filename prefix is MulBdirA.</p>
-		<h4>Mic in Box A</h4>
+		<h5>Mic in Box A</h5>
 		<p>Responses A are multiplied by 2nd order high-pass and polarity inverted.
 			Corner frequency and Q-factor are specified with following f0 and Q text boxes.
 		</p>
@@ -3181,7 +3193,7 @@
 		<p>Function calculates correction to response measured with Microphone-in-Box technique,
 			or any other response including effect of close to ideal room gain at low frequencies.</p>
 		<p>For more information: Measuring Loudspeaker Low-Frequency Response.</p>
-		<h4>Protection Capacitor A z B</h4>
+		<h5>Protection Capacitor A z B</h5>
 		<p>Compensates effect of protection capacitor in series with driver while frequency response measurements with semi- or full dual channel mode i.e.
 			reference channel is connected to output of sound card or power amplifier.
 			Not between protection capacitor and driver!
@@ -3191,7 +3203,7 @@
 			Enter series capacitance to C/uF text box.
 		</p>
 		<p>Default result filename prefix is Uncap.</p>
-		<h4>Multiply A * piston directivity</h4>
+		<h5>Multiply A * piston directivity</h5>
 		<p>Responses A multiplied by piston directivity.
 			Calculation parameters are piston diameter for circular or width for rectangular radiator, and off-axis angle in degrees.
 			Off-axis angle coded in filename in response list A is applied if 0 degrees is entered.
@@ -3204,9 +3216,9 @@
 		<ul>
 			<li>Create off-axis response including piston directivity from single on-axis or near field response.</li>
 		</ul>
-		<h3 id="Single_output">Single output</h3>
+		<h4 id="Single_output">Single output</h4>
 		<p>Functions for multiple input responses, producing single result response:</p>
-		<h4>Sum of A responses</h4>
+		<h5>Sum of A responses</h5>
 		<p>= A0 + A1 + A2 + ...</p>
 		<p>Default result filename is VituixCAD Sum.</p>
 		<ul>
@@ -3219,7 +3231,7 @@
 				See Complex calculation.
 			</li>
 		</ul>
-		<h4>Average of A responses</h4>
+		<h5>Average of A responses</h5>
 		<p>= (A0 + A1 + A2 + ...) / N</p>
 		<p>Default result filename is VituixCAD Avg.</p>
 		<ul>
@@ -3227,14 +3239,14 @@
 				See Complex calculation.
 			</li>
 		</ul>
-		<h4>RMS of A responses</h4>
+		<h5>RMS of A responses</h5>
 		<p>= SQRT((A02 + A12 + A22 + ...) / N)</p>
 		<p>RMS is alternative for simple average (arithmetic mean).
 			Square scales single magnitude value for area or power, for example from sound pressure to intensity.
 			See Complex calculation.
 		</p>
 		<p>Default result filename is VituixCAD RMS.</p>
-		<h4>Maximum of A responses</h4>
+		<h5>Maximum of A responses</h5>
 		<p>Searches maximum magnitude from responses (A) for each frequency point.
 			Phase angle of result response is taken from selected row.
 		</p>
@@ -3242,7 +3254,7 @@
 		<ul>
 			<li>Create reference response for manual Directivity Index calculation if preferred reference response is maximum pressure within listening window instead of single on-axis response (which could contain diffraction dips).</li>
 		</ul>
-		<h3 id="Additional_options">Additional options</h3>
+		<h4 id="Additional_options">Additional options</h4>
 		<p>Result filename extension is selected with list box.
 			Available options are .txt, .frd, .cal, .mic, .lms, .etx and .zma</p>
 		<p>Complex Sum/Avg/RMS should be checked in order to calculate complex vector sum, average or RMS with phase angle information.
@@ -3267,7 +3279,7 @@
 		<p>Result files saved as .cal or .mic are compressed by skipping frequency points where magnitude slope changes less than 0.12 dB/oct.
 			At least one point per octave and first and last point are written though response is perfectly flat.
 		</p>
-		<h3 id="Calculator_Graph">Graph</h3>
+		<h4 id="Calculator_Graph">Graph</h4>
 		<p>Enter title directly into graph for publishing of captured image.</p>
 		<p>Maximum and span of magnitude axis are adjusted by arrow buttons or entering value or Up/Down keys in the text boxes.
 			Visible frequency range is also adjustable.
@@ -3281,20 +3293,20 @@
 			See Chart overlays.
 		</p>
 		<hr>
-		<h2 id="Auxiliary_calculator">Auxiliary calculator</h2>
-		<h3 id="Time_window">Time window</h3>
+		<h3 id="Auxiliary_calculator">Auxiliary calculator</h3>
+		<h4 id="Time_window">Time window</h4>
 		<img class="indent1" alt="aux_time_window.png" src="images/aux_time_window.png">
 		<p>Calculates maximum length of time window (ms) without reflections.
 			Enter shortest distance from driver to mic, from driver to floor and from mic to floor (mm).
 			Calculates also path length of reflection (mm) and minimum frequency (Hz) with 1/1, 1/2 and 1/3 octs.
 			resolution.
 		</p>
-		<h3 id="Wave_length">Wave length</h3>
+		<h4 id="Wave_length">Wave length</h4>
 		<img class="indent1" alt="aux_wave_length.png" src="images/aux_wave_length.png">
 		<p>Calculates 1.2x or full or 1/2 or 1/4 wave length (mm) and sound travel time (ms) in air by frequency (Hz).</p>
 		<p>Enter 1.2x or full or 1/2 or 1/4 wave length to calculate frequency and travel time.</p>
 		<p>Enter travel time of full wave or fraction to calculate frequency and wave length.</p>
-		<h3 id="Near_field">Near field</h3>
+		<h4 id="Near_field">Near field</h4>
 		<img class="indent1" alt="aux_near_field.png" src="images/aux_near_field.png">
 		<p>Calculates maximum near field frequency (Hz) and maximum distance (mm) to microphone by effective piston diameter (Dd mm) or area (Sd cm2).
 			This gives approximately -0.5 dB error at fNFmax in theory if mic is in the center point of ideal piston.
@@ -3304,12 +3316,12 @@
 		<p>Max.
 			distance to mic is 5.5% of Dd.
 		</p>
-		<h3 id="Sample_time">Sample time</h3>
+		<h4 id="Sample_time">Sample time</h4>
 		<img class="indent1" alt="aux_sample_time.png" src="images/aux_sample_time.png">
 		<p>Calculates time (µs) and distance in air (mm) for 1 and 2 and any number of samples by sample rate (Hz).
 			You can also calculate number of samples and distance by time, or number of samples and time by distance.
 		</p>
-		<h3 id="Box_volume">Box volume</h3>
+		<h4 id="Box_volume">Box volume</h4>
 		<img class="indent1" alt="aux_box_volume.png" src="images/aux_box_volume.png">
 		<p>Calculates outer dimensions (mm) by net volume target (liters), wall thicknesses (mm) and internal volume losses due to vents, drivers, braces and amplifier box.
 			You can lock one or two aor all outer dimensions.
@@ -3320,7 +3332,7 @@
 			depth (<span style="color: blue;">blue</span>) as well as 
 			open pipe resonances of vents (<span style="color: magenta;">magenta</span>).
 		</p>
-		<h3 id="Time_align">Time align</h3>
+		<h4 id="Time_align">Time align</h4>
 		<img class="indent1" alt="aux_time_align.png" src="images/aux_time_align.png">
 		<p>Time align function can be used to specify delay/distance difference between acoustic centers of two drivers.
 			Delay can be iterated manually with delay [µs] or distance [mm] text boxes, or with a solver.
@@ -3364,7 +3376,7 @@
 			Simulation options are limited for users who don't have adequate measurement gear for accurate and stable timing measurements with dual or semi-dual channel connection and measurement mode.
 		</p>
 		<hr>
-		<h2 id="SPL_Trace">SPL Trace</h2>
+		<h3 id="SPL_Trace">SPL Trace</h3>
 		<img class="indent1" alt="spl_trace.png" src="images/spl_trace.png">
 		<p>SPL Trace tool can capture frequency and impedance responses from bitmap loaded from file or pasted from the clipboard.
 			Several image file types are supported such as png, jpg, bmp and gif.
@@ -3459,11 +3471,11 @@
 		<p>Captured curves can be shown with highlighted and partly transparent color by checking Options -> Green SPL, Cyan Z.</p>
 		<hr>
 		
-		<h1 id="Appendices">Appendices</h1>
+		<h2 id="Appendices">Appendices</h2>
 		
-		<h2 id="Trifonov_Transient">1. Trifonov Transient filters</h2>
+		<h3 id="Trifonov_Transient">1. Trifonov Transient filters</h3>
 		
-		<h3>Background</h3>
+		<h4>Background</h4>
 		<p>Needless to say, filters are the brain and heart of speakers. As music evolves over time - we accept 
 			the parameters of Time as Suprime (highest  important) than the STATIONARY frequency response.
 			This does not mean a limited and curved frequency response.</p>
@@ -3495,9 +3507,9 @@
 			shaking (approximately &plusmn;5 %) and maximum linear frequency response (&plusmn;0.7 dB).</p>
 		<p>I have to admit that there is a good solution with DSP, but not for those professional users and audiophiles who want an analog path from input to output.</p>
 		
-		<h3 id="Trifonov_TP">Trifonov Transient Perfect (TP)</h3>
+		<h4 id="Trifonov_TP">Trifonov Transient Perfect (TP)</h4>
 		
-		<h4>Low-pass for lower band, 3rd order</h4>
+		<h5>Low-pass for lower band, 3rd order</h5>
 		<p><b>Acoustical target, Active</b><br>
 			2nd order stage: fo=0.784*f<sub>xo</sub>, Q=0.908<br>
 			1st order stage: fo=2.695*f<sub>xo</sub></p>
@@ -3506,7 +3518,7 @@
 			where<br>
 			Z=impedance of the driver in Ohms, f<sub>xo</sub>=crossover frequency in Hz - where LP and HP slopes intersect.</p>
 		
-		<h4>High-pass for upper band, 2nd order</h4>
+		<h5>High-pass for upper band, 2nd order</h5>
 		<p><b>Acoustical target, Active</b><br>
 			2nd order stage: fo=0.694*f<sub>xo</sub>, Q=0.45<br>
 			Delay=333333/f<sub>xo</sub> us</p>
@@ -3514,16 +3526,16 @@
 			C2=103200/Z/f<sub>xo</sub> uF, L3=510*Z/f<sub>xo</sub> mH<br>
 			Delay=114667/f<sub>xo</sub> mm</p>
 		
-		<h3 id="Trifonov_TQ">Trifonov Q Optimized Transient mk2 (TQ)</h3>
+		<h4 id="Trifonov_TQ">Trifonov Q Optimized Transient mk2 (TQ)</h4>
 		
-		<h4>Low-pass for lower band, 3rd order</h4>
+		<h5>Low-pass for lower band, 3rd order</h5>
 		<p><b>Acoustical target, Active</b><br>
 			2nd order stage: fo=0.794*f<sub>xo</sub>, Q=1.03<br>
 			1st order stage: fo=1.22*f<sub>xo</sub></p>
 		<p><b>Passive</b><br>
 			L1=248.33*Z/f<sub>xo</sub> mH, C1=268800/Z/f<sub>xo</sub> uF, L2=82.17*Z/f<sub>xo</sub> mH</p>
 		
-		<h4>High-pass for upper band, 2nd order</h4>
+		<h5>High-pass for upper band, 2nd order</h5>
 		<p><b>Acoustical target, Active</b><br>
 			2nd order stage: fo=1.116*f<sub>xo</sub>, Q=0.639<br>
 			Delay=490000/f<sub>xo</sub> us</p>
@@ -3531,8 +3543,9 @@
 			C2=92400/Z/f<sub>xo</sub> uF, L3=225*Z/f<sub>xo</sub> mH<br>
 			Delay=168600/f<sub>xo</sub> mm</p>
 		
-		<h3>License</h3>
+		<h4>License</h4>
 		<p>The Trifonov Transient filter technology is free for homemade DIY.<br>
 			For manufacturers − Request a license quota: <a href="mailto:trifonov.audio@gmail.com">trifonov.audio@gmail.com</a></p>
+	</div>
 	</body>
 </html>
